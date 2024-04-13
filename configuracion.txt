@@ -1,0 +1,4 @@
+git init
+git config user.name "NOMBRE"
+git config user.email "MAIL"
+git remote add origin "LINK"
