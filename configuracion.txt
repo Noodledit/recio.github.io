@@ -2,3 +2,8 @@ git init
 git config user.name "NOMBRE"
 git config user.email "MAIL"
 git remote add origin "LINK"
+
+git add nombre_del_archivo.extencion
+git commit -m "mensaje que se deja en el commit"
+git push -u origin master
+
