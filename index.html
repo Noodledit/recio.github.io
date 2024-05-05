@@ -1,20 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto Codo a codo</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="/templates/index.css">
 </head>
 <body>
-    <header>
-        
+    <header class="grid-container">
+        <div id="Logo" class="grid-item">
+            <h1><span>#</span>Recio</h1>
+        </div>
+        <!-- <img src="/static/img/traced-parthenon-facts-5.png" alt=""> -->
+        <nav id="menu" class="grid-item">
+            <p data-target="#inicio" class="flex-item navegacion actual">Inicio</p>
+            <p data-target="#html" class="flex-item navegacion">HTML</p>
+            <p data-target="#css" class="flex-item navegacion">CSS</p>
+            <p data-target="#js" class="flex-item navegacion">JavaScript</p>
+        </nav>
     </header>
-    <main>
-
+    <main class="grid-container-main">
+        <aside class="grid-object aside"><p>aca esta otro item</p></aside>
+        <section class="grid-object section">
+        <article data-content id="inicio" class="activo">
+            <h2>inicio</h2>
+            <p>lo que vemos en la pestaña inicio</p>
+        </article>
+        <article data-content id="html" class="">
+            <h2>este es el section de HTML</h2> 
+            <p>asperiores. Commodi hic culpa voluptatem iusto autem adipisci obcaecati iste, laudantium quam natus eum fugiat quas impedit consectetur doloremque, molestias quo assumenda. Officia laborum deserunt temporibus quo!</p>
+        </article>
+        <article data-content id="css" class="">
+            <h2>este es el section de CSS </h2>
+            <p>e? Omnis dignissimos veniam debitis illo. Nihil reprehenderit illo perspiciatis? Quam amet architecto atque sit consectetur quae ullam laudantium. Laboriosam a qui tempore, veniam assumenda deleniti excepturi.</p>
+        </article>
+        <article data-content id="js" class="">
+            <h2> este es el section de JavaScript</h2>
+            <p>icta tempore perferendis? Odio illo temporibus autem veniam tenetur reiciendis assumenda hic molestiae, officiis laudantium eum debitis earum porro corporis consequuntur voluptate ex ab nisi illum!</p>
+        </article>
+        <article data-content id="bootstrap" class="">
+            <h2> este es el section de bootstrap</h2>
+            <p>axime molestias obcaecati beatae sequi ullam architecto minima, praesentium, asperiores dolore provident libero ut voluptatem, soluta doloribus ipsa animi consectetur placeat nobis. Excepturi voluptates eligendi architecto amet? Atque?</p>
+        </article>
+        </section>
+        <aside class="grid-object aside-2"><p>aca esta un item mas</p></aside>
     </main>
     <footer>
 
     </footer>
+    <script src="/templates/script/script.js"></script>
 </body>
 </html>

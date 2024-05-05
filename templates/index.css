@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+header {
+    position: relative;
+    background-color: #131313;
+    height: 25vh;
+}
+
+.grid-item nav {
+    grid-area: "nav";
+}
+
+.grid-item div {
+    grid-area: "logo";
+}
+
+aside{
+    /* position: fixed; */
+    float: left;
+    width: 20%;
+    height: 100vh;
+    background-color: #2b2b2b;
+    align-content: baseline;
+}
+
+section{
+    float: left;
+    width: 60%;
+    background-color:#000000;
+}
+
+.flex-item {
+    background-color: transparent;
+    font-weight: bold;
+    color: #444;
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    margin: .5rem .5rem;
+    border: 2px solid #131313;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: box-shadow .3s ease;
+    box-shadow: .5rem .5rem 1rem #2b2b2b,
+        -.5rem -.5rem 1rem #000000;
+}
+
+.flex-item:hover {
+    box-shadow: .5rem .5rem 1rem #000000,
+        -.5rem -.5rem 1rem #2b2b2b;
+}
+
+.flex-item:active {
+    color: azure;
+    box-shadow: inset .2rem .2rem 1rem #000000,
+        inset -.2rem -.2rem 1rem #2b2b2b;
+}
+
+#Logo {
+    display: flex;
+    align-content: start;
+    justify-content: flex-end;
+    height: 100%;
+    background-image: url(/static/img/traced-Diseño\ sin\ título.png);
+    height: 20vh;
+    width: 20vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#Logo h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 60px;
+    text-align: end;
+    align-content: end;
+    color: red;
+}
+
+#Logo span {
+    color: greenyellow;
+}
+
+ul {
+    height: auto;
+}
+
+#menu {
+    /* background-color: white; */
+    height: 25vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: end;
+    list-style-type: none;
+}
+
+#menu p.activo {
+    background-color: rgb(0, 211, 211);
+    color: #131313;
+}
+
+main {
+    background-color: blue;
+    color: wheat;
+}
+
+[data-content] {
+    display: none;
+}
+
+.activo[data-content] {
+    display: block;
+}
+
+.actual[data-target] {
+    background-color: aliceblue;
+    color: #444;
+}
