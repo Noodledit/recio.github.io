@@ -33,7 +33,7 @@
     height: 3px;
     width: 100%;
     border-radius: 5px;
-    transition: transform .5s;
+    transition: transform .5s, opacity .3s;
     transform-origin: left;
     margin: 2px;
 }
@@ -81,7 +81,7 @@ aside{
 section{
     float: left;
     width: 60%;
-    background-color:#000000;
+    background-color:#2b2b2b;
 }
 
 .flex-item {
@@ -149,22 +149,23 @@ ul {
     list-style-type: none;
 }
 
-#menu p.activo {
+/* #menu p.activo {
     background-color: rgb(0, 211, 211);
     color: #131313;
-}
+} */
 
 main {
-    background-color: blue;
-    color: wheat;
+    color:#7FFF00 ;
 }
 
 [data-content] {
     display: none;
+    padding: 5rem;
 }
 
 .activo[data-content] {
     display: block;
+    height: 100vh;
 }
 
 .animated-button::before {
@@ -197,19 +198,14 @@ main {
 }
 
 .actual[data-target] {
-    background-color: aliceblue;
-    color: #2b2b2b;
-    
-}
-
-.borderGradient{
+    color: aliceblue;
+    /* color: #2b2b2b; */
     content: "";
     background: linear-gradient(270deg, #008080, #00FFFF, #008cff, #008064, #00ffb3, #7FFF00);
     background-size: 1400% 1400%;
     border-radius: 10px;
     transition: opacity 0.7s ease-in-out;
     animation: gradient 3s ease infinite;
-    opacity: 1;
 }
 
 
