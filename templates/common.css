@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: head;
+    background-color: #131313;
+    /* text-align: center; */
+}
+
+aside{
+    background-color: #16161d ;
+    align-content: baseline;
+}
+
+section{
+    background-color:#2b2b2b;
+}
+
+main {
+    display: flex;
+    grid-area: main;
+    color:#7FFF00 ;
+}
+
+footer {
+    grid-area: foot;
+}

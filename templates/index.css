@@ -1,16 +1,15 @@
-* {
-    margin: 0;
-    padding: 0;
-}
+@import url(common.css);
 
 .button-container {
     display: flex;
+    flex-grow: 1;
     flex-direction: row;
-    justify-content: end;
-    align-items: end;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
 }
 
-.butt-flex{
+.butt-flex {
     margin: .5vw 2vw;
     display: flex;
     flex-direction: column;
@@ -18,7 +17,7 @@
     height: 3rem;
     border: 0;
     background: transparent;
-    gap: .65rem;
+    gap: .40rem;
     cursor: pointer;
     justify-items: center;
     align-items: center;
@@ -28,7 +27,7 @@
     background-color: rgb(0, 188, 221);
 }
 
-.butt-flex > span {
+.butt-flex>span {
     background: white;
     height: 3px;
     width: 100%;
@@ -48,43 +47,26 @@
 
 .butt-flex:hover span:last-child {
     transform: rotate(-45deg);
-} 
+}
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "head head head head"
+        "main main main main"
+        "foot foot foot foot"
+    ;
+    /* grid-template-columns: 2fr 1fr;
+    grid-template-rows: 100px 200px 100px; */
 }
 
-header {
-    position: relative;
-    background-color: #131313;
-    height: 25vh;
-}
+.grid-item header {}
 
-.grid-item nav {
-    grid-area: "nav";
-}
+.grid-item main {}
 
-.grid-item div {
-    grid-area: "logo";
-}
+.grid-item footer {}
 
-aside{
-    /* position: fixed; */
-    float: left;
-    width: 20%;
-    height: 100vh;
-    background-color: #16161d ;
-    align-content: baseline;
-}
-
-section{
-    float: left;
-    width: 60%;
-    background-color:#2b2b2b;
-}
-
-.flex-item {
+.navegacion {
     background-color: transparent;
     font-weight: bold;
     color: #444;
@@ -94,68 +76,61 @@ section{
     border: 2px solid #131313;
     border-radius: .5rem;
     cursor: pointer;
-    transition: box-shadow .3s ease;
-    box-shadow: .5rem .5rem 1rem #2b2b2b,
-        -.5rem -.5rem 1rem #000000;
+    transition: box-shadow 1s ease, color .06s ease;
+    /* box-shadow: .5rem .5rem 1rem rgb(0, 0, 0),
+        -.5rem -.5rem 1rem #2b2b2b; */
+    filter: blur(1.5px);
 }
 
-.flex-item:hover {
+.navegacion:hover {
     box-shadow: .5rem .5rem 1rem #000000,
         -.5rem -.5rem 1rem #2b2b2b;
 }
 
-.flex-item:active {
-    color: azure;
+.navegacion:active {
+    color: rgba(13, 226, 226, 0.911);
     box-shadow: inset .2rem .2rem 1rem #000000,
         inset -.2rem -.2rem 1rem #2b2b2b;
 }
 
-#Logo {
-    display: flex;
-    align-content: start;
-    justify-content: flex-end;
+#logo {
     height: 100%;
-    background-image: url(..static/img/traced-parthenon-facts-5.png);
-    height: 20vh;
-    width: 20vw;
+    flex-grow: 1;
+}
+
+.logo {
+    height: 20rem;
+    align-content: start;
+    /* justify-content: flex-end; */
+    /* height: 20rem;
+    width: auto; */
+    background: radial-gradient(circle, white 15%, transparent 69%);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
 }
 
-#Logo h1 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 60px;
-    text-align: end;
-    align-content: end;
-    color: red;
-}
-
-#Logo span {
-    color: greenyellow;
-}
-
-ul {
-    height: auto;
-}
-
-#menu {
-    /* background-color: white; */
-    height: 25vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    align-items: end;
-    list-style-type: none;
-}
-
-/* #menu p.activo {
-    background-color: rgb(0, 211, 211);
-    color: #131313;
+/* #logo::before {
+    content: "";
+    position: absolute;
+    top: -1rem;
+    right: 0;
+    bottom: 0;
+    left: -9rem;
+    background: radial-gradient(circle, white 0%, transparent 45%);
 } */
 
-main {
-    color:#7FFF00 ;
+#menu {
+    padding: 0 .5rem .5rem .5rem;
+    background-color: #131313;
+    border-radius: 0 0 .5rem .5rem;
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+    z-index: 1;
 }
 
 [data-content] {
@@ -168,46 +143,40 @@ main {
     height: 100vh;
 }
 
-.animated-button::before {
-    /* Define el gradiente animado como un pseudo-elemento detrás del botón */
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(270deg, #008080, #00FFFF, #008cff, #008064, #00ffb3, #7FFF00);
-    background-size: 1400% 1400%;
-    z-index: -1;
-    transition: opacity 0.3s ease-in-out;
-    animation: gradient 3s ease infinite;
-    opacity: 1;
-  }
-  
-  @keyframes gradient { 
+@keyframes gradient { 
     0%{background-position:0% 50%}
     50%{background-position:50% 50%}
     100%{background-position:0% 50%}
   }
-  
 
-@keyframes glowing {
- 0%{background-position: 0 0;}
- 50%{background-position: 400% 0;}
- 100%{background-position: 0 0;}
+[data-target] {
+    transition: filter 1.5s ease, box-shadow .4s ease;
+    background: transparent;
 }
 
 .actual[data-target] {
     color: aliceblue;
-    /* color: #2b2b2b; */
+    background-color: #ffffff;
+    opacity: .9;
+    position: relative;
     content: "";
-    background: linear-gradient(270deg, #008080, #00FFFF, #008cff, #008064, #00ffb3, #7FFF00);
     background-size: 1400% 1400%;
     border-radius: 10px;
+    filter: blur(.4px);
+}
+
+.actual[data-target]::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, #008080, #00FFFF, #008cff, #008064, #00ffb3, #7FFF00);
+    background-size: 800%;
+    border-radius: 10px;
+    filter: blur(12px);
     transition: opacity 0.7s ease-in-out;
     animation: gradient 3s ease infinite;
 }
-
-
-
-
