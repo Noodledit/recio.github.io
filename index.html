@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,37 +9,471 @@
 </head>
 <body class="grid-container">
     <header>
-      <!-- El header esta cargado a traves de JS. -->
+        <!-- El header esta cargado a traves de JS. -->
     </header>
-    <main>
-        <aside class="aside"><p>aca esta otro item</p></aside>
-        <section class="section">
-        <article data-content id="inicio" class="activo">
-            <h2>inicio</h2>
-            <p>Bienvenidos a <span>#Recio</span>, acá van a encontrar una forma didáctica de aprender los pilares básicos de la programación web, de mano de los estudiantes de codo a codo, queremos hacer que el aprendizaje sea más interactivo y divertido, aplicamos las diferentes posibilidades que tienen los lenguajes estructurales, de diseño y funcionalidad que puede tener una página web, encontraran las pestañas con las diferentes herramientas que se pueden adquirir.</p>
-        </article>
-        <article data-content id="html" class="">
-            <h2>este es el section de HTML</h2> 
-            <p>asperiores. Commodi hic culpa voluptatem iusto autem adipisci obcaecati iste, laudantium quam natus eum fugiat quas impedit consectetur doloremque, molestias quo assumenda. Officia laborum deserunt temporibus quo!</p>
-        </article>
-        <article data-content id="css" class="">
-            <h2>este es el section de CSS </h2>
-            <p>e? Omnis dignissimos veniam debitis illo. Nihil reprehenderit illo perspiciatis? Quam amet architecto atque sit consectetur quae ullam laudantium. Laboriosam a qui tempore, veniam assumenda deleniti excepturi.</p>
-        </article>
-        <article data-content id="js" class="">
-            <h2> este es el section de JavaScript</h2>
-            <p>icta tempore perferendis? Odio illo temporibus autem veniam tenetur reiciendis assumenda hic molestiae, officiis laudantium eum debitis earum porro corporis consequuntur voluptate ex ab nisi illum!</p>
-        </article>
-        <article data-content id="bootstrap" class="">
-            <h2> este es el section de bootstrap</h2>
-            <p>axime molestias obcaecati beatae sequi ullam architecto minima, praesentium, asperiores dolore provident libero ut voluptatem, soluta doloribus ipsa animi consectetur placeat nobis. Excepturi voluptates eligendi architecto amet? Atque?</p>
-        </article>
+    <main id="principal" class="home">
+        <div id="menuLeft" class="in-flex">
+        <aside  class="navbar">
+            <p>Menu de costado</p>
+        </aside>
+        <div class="boton-flotante">Menú</div>
+        </div>
+        
+        <section id="recursos" class="in-flex2">
+            <article data-content id="inicio" class="activo">
+                <h2>inicio</h2>
+                <p>Bienvenidos a <span>#Recio</span>, acá van &#128405 a encontrar una forma didáctica de aprender los
+                    pilares básicos de la programación web, de mano de los estudiantes de codo a codo, queremos hacer
+                    que el aprendizaje sea más interactivo y divertido, aplicamos las diferentes posibilidades que
+                    tienen los lenguajes estructurales, de diseño y funcionalidad que puede tener una página web,
+                    encontraran las pestañas con las diferentes herramientas que se pueden adquirir.</p>
+            </article>
+            <article data-content id="html" class="">
+                <div>
+                    <h2>Contenidos Generales de HTML:</h2>
+                    <ul>
+                        <li>Páginas web, conceptos básicos de Internet, introducción a las tecnologías dela web, concepto cliente/servidor. HTML. Funcionamiento.</li>
+                        <li>Estructura de HTML - Etiquetas básicas y de atributos (títulos, párrafo, saltos de líneas).</li>
+                        <li>Tipografía.</li>
+                        <li>Etiquetas especiales: URL, Links, Rutas: absolutas. Listas. Tablas. Iframe. Elementos block e inline.</li>
+                        <li>Formularios. Elementos y atributos.</li>
+                    </ul>
+                </div>
+                <div class="sectionGrid">
+                    <div class="gridItem">
+                        <h2>Página Web</h2>
+                        <p>Principales características de una página Web:</p>
+                        <ul>
+                            <li>
+                                Es un documento HTML (texto, imágenes, videos, CSS, Javascript).
+                            </li>
+                            <li>
+                                Pueden ser estáticas (sólo código) o dinámica (con contenido extraído de una base de datos).
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="gridItem">
+                        <h2>Sitio Web</h2>
+                        <p>Principales características de un sitio Web:</p>
+                        <ul>
+                            <li>
+                                Son un conjunto de páginas Web estructuradas en un dominio.
+                            </li>
+                            <li>
+                                Se pueden crear escribiendo código o mediante CMS o builders.
+                            </li>
+                            <li>
+                                Pertenecen a empresas, organizaciones o personas.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="gridItem">
+                        <h2>Aplicacion web</h2>
+                        <p>Principales características de una aplicacion Web</p> <br>
+                        <ul>
+                            <li>
+                                Es un software desarrollado con tecnologías Web.
+                            </li>
+                            <li>
+                                Se crea mediante código, utilizando diversos lenguajes de programación, librerías, frameworks, etc.
+                            </li>
+                            <li>
+                                Son creadas por desarrolladores Web profesionales.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="">
+                    <h2>Estructura de una Página Web</h2>
+                    <article id="estructura" class="sectionGrid">
+                        <div class="gridItem">
+                            <p>Estas etiquetas ayudan a definir la clase de contenido tendrá una página Web Describen su significado tanto para el navegador como para el desarrollador. A través de ellas los navegadores y buscadores reconocen patrones y una estructura determinada. Debemos respetarlas porque ayudan alnavegador a entender su significado para mostrarlo en pantalla y ayudan a los buscadores a reconocer el contenido y la  estructura del sitio.</p>
+                        </div>
+                        <figure class="gridItem">
+                            <figcaption>Ejemplo:</figcaption>
+                            <img src="static/img/HTML/ejemploEstructura1.png" alt="Estructura Web">
+                        </figure>
+                    </article>
+                    <div class="">
+                        <h2>Codigo estructural de un HTML:</h2>
+                        <figure>
+                            <figcaption>Ejemplo de codigo:</figcaption>
+                            <img src="static/img/HTML/ejemploCodigo1.png" alt="Codigo Estructural">
+                            <legend><b>Tip:</b> en VSC si escribimos "!" y precionamos enter, el codigo se escribira de forma automatica.</legend>
+                        </figure>
+                    </div>
+                    <div class="">
+                        <h2>Estructura de una Página Web (código)</h2>
+                        <p>
+                            <b>&lt;!DOCTYPE html&gt;</b> Indica que la versión corresponde a HTML5. <br><br>
+                            <b>&lt;html lang= “es”&gt;</b> Es la etiqueta principal que engloba al resto de las
+                            etiquetas, el atributo lang
+                            define el tipo de lenguaje. <br><br>
+                            <b>&lt;head&gt;</b> Es la cabeza del documento que contiene los metadatos de la página
+                            web. <br><br>
+                            <b>&lt;meta charset="utf-8"&gt;</b> Indica al navegador qué tipo de caracteres
+                            contiene la página, con el
+                            atributo charset vamos a indicar el conjunto de caracteres que vamos a usar y con el valor
+                            "utf-8"
+                            abarcamos a la mayoría de los sistemas de escritura. <br><br>
+                            <b>&lt;title&gt;</b> Indica el título de la página Web, que se visualiza en la barra
+                            de título del navegador. <br><br>
+                            <b>&lt;body&gt;</b> Es el cuerpo del documento donde va a estar todo el contenido que
+                            vamos a mostrar.
+                        </p>
+                    </div>
+                </div class="sectionFlex">
+                <div>
+                        <h2>Las etiquetas</h2>
+                        <ul>
+                            <li>Definen qué función cumple cada elemento dentro de la página.</li>
+                            <li>Estructura básica, tienen una apertura y un cierre que describen la información
+                                contenida entre ellas, aunque algunos casos solamente tienen apertura, como la
+                                etiqueta <span>&lt;br&gt;</span> (line break o salto de línea):</li>
+                        </ul>
+                    
+                            <p><b>Ejemplo:</b></p>
+                            <div class="flex star">
+                                <p><span class="backgroundNegro">&lt;<span class="rojo">b</span>&gt;Texto de ejemplo&lt;<span class="rojo">b</span>&gt;</span></span><span class="salto"> Texto de ejemplo</span></p></div>
+                            <div class="flex star">
+                                <p> <span class="backgroundNegro">&lt;<span class="rojo">b</span>&gt;Hola, estamos en el parrafo 1&lt;<span class="rojo">b</span>&gt;</span></span><span> Hola, estamos en el parrafo 1</span></p></div>
+                            <div  class="flex star">
+                                <p> <span class="backgroundNegro">&lt;<span class="rojo">b</span>&gt;Ahora hemos cambiado de parrafo&lt;<span class="rojo">b</span>&gt;</span></span> Ahora emos cambiado de parrafo</p></div>
+                            <div class="flex star">
+                                <p> <span class="backgroundNegro">&lt;<span class="rojo">b</span>&gt; Este es un parrafo &gt;br&lt; que continua en este renglon&lt;<span class="rojo">b</span>&gt;</span></span>Este es un parrafo <br> que continua en este renglon</p></div>
+                            </div>
+                    <div>
+                        <h2>Etiquetas básicas</h2>
+                        <p>
+                        &lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;….&lt;h6&gt;: Encabezados, numerados del 1 al 6 por orden de relevancia. Es importante respetar ese orden para que el navegador entienda la estructura de la página.</p>
+                        <div class="sectionGrid">
+                            <div>
+                                <span class="backgroundNegro">
+                                    &lt;h1&gt;Encabezado en H1&lt;/h1&gt;<br>
+                                    &lt;h2&gt;Encabezado en H2&lt;/h2&gt;<br>
+                                    &lt;h3&gt;Encabezado en H3&lt;/h3&gt;<br>
+                                    &lt;h4&gt;Encabezado en H4&lt;/h4&gt;<br>
+                                    &lt;h5&gt;Encabezado en H5&lt;/h5&gt;<br>
+                                    &lt;h6&gt;Encabezado en H6&lt;/h6&gt;<br>
+                                </span>
+                            </div>
+                            <div>
+                                <span style="font-size: 2em;">Encabezado en H1</span> <br>
+                                <span style="font-size: 1.5em;">Encabezado en H2</span><br>
+                                <span style="font-size: 1.3em;">Encabezado en H3</span><br>
+                                <span style="font-size: 1em;">Encabezado en H4</span><br>
+                                <span style="font-size: .8em;">Encabezado en H5</span><br>
+                                <span style="font-size: .7em;">Encabezado en H6</span><br>
+                            </div>
+                        </div>
+
+                        <p> <b>Tip:</b> En VSC si escribimos h1 y presionamos TAB la etiqueta de cierre se escribe automáticamente</h2>
+                        </p>
+                        <p><b>imagen de etiquetas atributo y valor.</b></p>
+                        <p><b>Ejemplo:</b> <br> <span class="backgroundNegro">&lt;<span class="rojo">a</span> <span
+                                    class="amarillo">href</span>= <span class="verde">"https://www.google.com"</span>
+                                <span class="amarillo">target</span>= <span class="verde">"_blank"</span>&gt;ir a
+                                google&lt;<span class="rojo">a</span>&gt;</span></p>
+                        <p><b>Ejemplo:</b> <br> <span class="backgroundNegro">&lt;<span class="rojo">a</span> <span
+                                    class="amarillo">href</span>= <span class="verde">"https://www.google.com"</span>
+                                <span class="amarillo">target</span>= <span class="verde">"_blank"</span>&gt;ir a
+                                google&lt;<span class="rojo">a</span>&gt;</span></p>
+                    </div>
+                    <div class="">
+                        <h2>Etiquetas básicas</h2>
+                        <p>&lt;<span class="rojo">p</span>&gt;: Representa un párrafo.</p>
+                        <p>Tip: En VSC con si escribimos Lorem100 se escribirá un texto de ejemplo de 100 palabras. Y escribiendo p*3 se crearán 3
+                            etiquetas &lt;<span class="rojo">p</span>&gt;.</p>
+                    </div>
+                    <div class="articFlex">
+                        <h2>Ejemplos de páginas Web</h2>
+                        <a href="https://www.w3schools.com/" target= "_blank">https://www.w3schools.com/</a> <br>
+                        <a href="https://instintobinario.com/category/hardware/" target= "_blank">https://instintobinario.com/category/hardware/</a> <br>
+                        <a href="https://blog.ida.cl/estrategia-digital/diferencias-aplicacion-web-sitio-web/" target= "_blank">https://blog.ida.cl/estrategia-digital/diferencias-aplicacion-web-sitio-web/</a> <br>
+                        <h2> Ejemplos de lo que no hay que hacer:</h2>
+                        <a href="http://arngren.net/" target= "_blank">http://arngren.net/</a> <br>
+                        <span>Artículo: </span>
+                        <a href="https://grafix.es/las-webs-mas-horrorosas-del-mundo/" target= "_blank">https://grafix.es/las-webs-mas-horrorosas-del-mundo/</a>
+                        <p>Cómo pensar la estructura de un Sitio Web:</p>
+                        <a href="https://coach2coach.es/estructura-sitio-web/" target= "_blank">https://coach2coach.es/estructura-sitio-web/</a> 
+                    </div>
+                </div>
+            </article>
+            <article data-content id="css" class="">
+                <div>
+                    <h2>Contenidos generales</h2>
+                <ul>
+                    <li>Introducción. Selectores básicos. Agrupamientos (div y span) - Atributos Globales - Especificidad- Etiquetas semánticas.</li>
+                    <li>Google Fonts. Colores. Iconos.</li>
+                    <li>Especificidad. Selectores descendientes. Modelo de Caja. Unidades de Medidas.</li>
+                    <li>Selectores avanzados. Pseudoclases. Prefijos de CSS. Transiciones, Animaciones y Transformaciones. Introducción Responsive Web Design.</li>
+                    <li>Responsive Web Design. Introducción a MediaQueries. Flexbox y CSS Grid.</li>
+                </ul>
+                </div>
+                <div>
+                    <h2>CSS</h2>
+                    <p>
+                    Es un lenguaje de diseño que nos permite darle estilos a los componentes de un documento en función de una jerarquía. Se ocupa de la estética, el aspecto. CSS es una sigla que proviene de Cascading StyleSheets (Hojas de Estilo en Cascada, en español). La palabra cascada hace referencia a una propiedad muy importante de CSS, y es la forma en que se comporta cuando entran en conflicto dos o más reglas de estilo. Cuando diseñamos un sitio web profesional, con un equipo de trabajo, mantener los estilos separados de la estructura y contenido (HTML) facilita la división de tareas entre los desarrolladores.
+                    </p>
+                </div>
+                <div>
+                    <h2>¿Cómo incorporamos CSS?</h2>
+                    <p>
+                        <b>CSS en Línea:</b> Dentro del atributo <b>style=””</b> incorporamos los estilos que se van a
+                        aplicar solo en esa misma etiqueta. Opción no recomendable.
+                    </p>
+                    <span><p><span class="backgroundNegro">&lt;<span class="rojo">p</span> <span class="amarillo">style</span>=<span class="verde">"color: white; background-color: violet"</span>&gt;Esto es un Parrafo &lt;<span class="rojo">p</span>&gt;</span></p></span>
+                    <span><p style="color: white; display: inline-block;text-align: center;background-color: blueviolet; padding: 0 auto;">Esto es un parrafo</p></span>
+                    <p>Utilizando el atributo <b>style</b> dentro de la etiqueta le proporcionamos estilo al
+                       párrafo. Se pueden utilizar a la vez varias parejas de: <b>propiedad: valor.</b></p>
+                    <p><b>CSS Interno:</b> Incluimos la etiqueta <b></b>&lt;style&gt;</b> dentro del <b>&lt;head&gt;</b> en nuestro
+                        documento. Opción menos recomendable: <br>
+                        <img src="static/img/CSS/style.png" alt="style"><br> En el ejemplo anterior todas las etiquetas <b>&lt;h1&gt;</b> tendrán color de fuente blanco y
+                        fondo de color rojo. 
+                        <b>CSS Externo:</b> En el <b>head</b> del documento HTML tenemos que incluir una referencia al
+                        archivo .css dentro del elemento <b><link></b>. Es la forma más recomendada.
+                    </p>
+                    <div><span class="backgroundNegro">&lt;<span class="rojo">link</span> <span class="amarillo">rel</span>= <span class="verde">"stylesheet"</span> <span class="amarillo">href</span>=<span class="verde">"estilos.css"</span>&gt;</span></div>
+                    <p>
+                        La referencia al archivo externo debe incluir <b>la ruta completa, el nombre del
+                        archivo y su extensión</b> si se encuentra en alguna subcarpeta dentro del proyecto.
+                        En caso de que el archivo de estilos se encuentre en la misma carpeta que el
+                        documento HTML, únicamente se debe incluir el <b>nombre del archivo y su
+                        extensión.</b> Recordemos que es aconsejable mantener estos archivos (CSS y HTML)
+                        en carpetas separadas. <br>
+                        Por ejemplo: href="css/estilos.css" o href="estilos.css"</p>
+                </div>
+                <div>
+                    <h2>Estructura</h2>
+                    <p>
+                        <b>Selector (1):</b> Indica el elemento al cual vamos a aplicar una regla de estilo. <br>
+                        <b>Propiedad (2) y Valor (3):</b> Especifica qué característica voy a afectar de un elemento
+                        y qué valor tomará. <br>
+                        <b>Bloque de declaración (4):</b> Indica el estilo que le daremos al selector.
+                       <img src="static/img/CSS/estructura1.png" alt="estructura 1"> <br>
+                        Los estilos se heredan de una etiqueta a otra. Si tenemos declarado en el <body>
+                        unos estilos, en muchos casos, estas declaraciones también afectarán a etiquetas que
+                        estén dentro del body.</p>
+                </div>
+                <div>
+                    <h2>Selectores</h2>
+                    <p>
+                        Indican el elemento al que se debe aplicar el
+                        estilo. La declaración indica "qué hay que
+                        hacer" y el selector indica "a quién hay que
+                        aplicarlo". Hay cuatro selectores básicos:
+                    </p>
+                    <div class="sectionGrid">
+                        <ul class="gridItem">
+                            <li>selector universal: Selecciona todos los
+                                elementos de HTML.</li>
+                            <li>selector de etiqueta o tipo: Se utiliza
+                                para seleccionar una etiqueta específica.</li>
+                            <li>selector de clase: Se utiliza agregando
+                                el atributo class a los elementos que
+                                queramos aplicarles estilos.</li>
+                            <li>selector de identificador (id): Similar a
+                                .class pero solo se aplica a una etiqueta
+                                individual.</li>
+                        </ul>
+                        <figure class="gridItem">
+                            <img src="static/img/CSS/selectores.png" alt="selectores">
+                        </figure>
+                    </div>
+                </div>
+                <div class="">
+                    <article>
+                        <h2>Selector universal (*)</h2>
+                        <p>Se indica con un * (asterisco) y aplica el estilo a todos los elementos contenidos en el documento HTML.</p>
+                    </article>
+                    <figure>
+                        <img src="static/img/CSS/selectorUniversal.png" alt="selector universal">
+                    </figure>
+                </div>
+                <div>
+                    <h2>Selector de etiqueta o tipo (<b>&lt;tag&gt;</b>)</h2>
+                        <p>
+                        Este selector afecta a una etiqueta específica. Esto nos permite ser más precisos a la
+                        hora de aplicar estilos a elementos particulares. Por ejemplo, a todas las etiquetas
+                        <b>&lt;h1&gt;</b> o <b>&lt;p&gt;</b> del documento.
+                        </p>
+                        <img src="static/img/CSS/selectorDeEtiquetaTag.png" alt="tag">
+                </div>
+                <div>
+                    <h2>Selector de clase (.selector)</h2>
+                    <p>
+                    Se aplica con un punto (.) seguido del nombre que le asignemos al selector. Dentro
+                    del documento HTML se lo referencia dentro de la etiqueta usando el atributo class,
+                    con la siguiente estructura: class=“nombredelselector”:</p>
+                    <figure>
+                        <img src="static/img/CSS/SelectorClases.png" alt="clases">
+                    </figure>
+                </div>
+                <div>
+                    <h2>Selector de id (#selector)</h2>
+                    <p>
+                    Se coloca con un numeral (#) en CSS y en el documento HTML se hace
+                    referencia al selector con id=“nombredelselector”, dentro de la etiqueta a la
+                    cual se aplica:
+                    </p>
+                    <figure>
+                        <img src="static/img/CSS/selectorID.png" alt="id">
+                    </figure>
+                </div>
+                <div>
+                    <h2>Span y Div (contenedores de información)</h2>
+                    <p>
+                        <b>span (abarcar):</b> Es un elemento en línea. Sirve para aplicar estilo al
+                        texto o agrupar elementos uno a continuación del otro. Sus etiquetas
+                        son <b>&lt;span&gt;</b> y <b>&lt;/span&gt;</b> (ambas obligatorias). Crea una caja que puede
+                        contener texto y/u otras etiquetas que se adapten al ancho del
+                        contenedor. <a href="https://www.w3schools.com/tags/tag_span.asp" target="_blank">+info</a><br>
+                        <b>div (división):</b> Es un elemento en bloque. Sirve para crear secciones o
+                        agrupar contenidos. Sus etiquetas son <b>&lt;div&gt;</b> y <b>&lt;/div&gt;</b> (ambas
+                        obligatorias). Crea una caja, que puede contener texto y/u otras
+                        etiquetas, que se separa de la caja anterior con un salto a la línea
+                        siguiente. <a href="https://www.w3schools.com/tags/tag_div.asp" target="_blank">+info</a>
+                    </p>
+                    <figure>
+                        <img src="static/img/CSS/divYspan.png" alt="div y span">
+                    </figure>
+                    <p>
+                        Nota: Con display: inline el span no atiende a la propiedades de alto (height) y
+                        ancho (width) ya que se adaptará al tamaño del contenido. Cambiando a display:
+                        inline-block se permiten estas propiedades, porque se comporta como un div.
+                        Se puede hacer que un span se comporte como un div si en CSS agrego display:
+                        block. <a href="https://www.w3schools.com/css/css_inline-block.asp" target="_blank">+info</a>
+                    </p>
+                </div>
+                <div>
+                    <h1>Atributos globales</h1>
+                    <p>
+                        Estos atributos pueden utilizarse con todos los elementos HTML:
+                    </p>
+                    <ul>
+                        <li><b>style="estilo CSS":</b> Especifica un estilo CSS conforme al elemento. <a href="https://www.w3schools.com/tags/att_global_style.asp" target="_blank">+info</a></li>
+                        <li><b>class="texto":</b> Especifica uno o más nombres de clases para un elemento
+                            (haciendo referencia a una clase en una hoja de estilo). <a href="https://www.w3schools.com/tags/att_global_class.asp" target="_blank">+info</a></li>
+                        <li><b>id="texto":</b> Especifica un id único por cada página. <a href="https://www.w3schools.com/tags/att_global_id.asp" target="_blank">+info</a></li>
+                        <li><b>title="texto":</b> Especifica información extra sobre un elemento (Tooltip Text).
+                            <a href="https://www.w3schools.com/tags/att_global_title.asp"  target="_blank">+info</a></li>
+                        <li></b>hidden:</b> Evita que el elemento y sus descendientes se muestran en el
+                            navegador. Cualquier control de formulario o de script dentro de la sección
+                            hidden será ejecutado, aunque no se muestra al usuario. <a href="https://www.w3schools.com/tags/att_global_hidden.asp" target="_blank">+info</a></li>
+                        <li><b>tabindex="número":</b> Especifica la posición del elemento en el orden de tabulación del documento. Se usa para tabular a través de los links de la página (o campos de un formulario). +info</li>
+                        <li>translate="yes|no": Indica si el texto del contenido del elemento y los valores delatributo deben ser traducidos o no. La opción por defecto es yes. +info</li>
+                        <li><b>lang=”es”:</b> Especifica el idioma del contenido del elemento. +info</li>
+                        <li><b>spellcheck="true|false":</b> Especifica si se debe corregir o no la gramática y la ortografía del elemento. +info</li>
+                        <li><b>draggable="true|false":</b> Indica si el elemento es arrastrable; se puede mover
+                            haciendo click sin soltar, moviéndolo a una nueva posición en la ventana. +info</li>
+                    </ul>
+                    <p><a href="">otros atributos globales</a></p>
+                </div>
+                <div>
+                    <h2 class="grande"><b>Especificidad</b></h2>
+                    <p>
+                        La <b>especificidad</b> es el mecanismo mediante el cual los navegadores deciden qué
+                        valores de una propiedad CSS son más relevantes para un elemento. Esto influye en la
+                        manera en que los estilos son aplicados. La especificidad está basada en las reglas de
+                        coincidencia que están compuestas por diferentes tipos de selectores CSS. <br>
+                        La especificidad sólo se aplica cuando el mismo elemento es objetivo de múltiples
+                        declaraciones. Según las reglas de CSS, en caso de que un elemento sea objeto de
+                        una declaración directa, está siempre tendrá preferencia sobre las reglas heredadas
+                        de su ancestro. <br>
+                        La especificidad hace referencia a la relevancia que tiene un estilo sobre un elemento
+                        de la página al cual le están afectando varios estilos de CSS al mismo tiempo. Es decir,
+                        hace referencia al grado de importancia de un estilo sobre otro.</p>
+                        <div>
+                            <table summary="La siguiente tabla muestra los niveles de especificidad, desde los más específicos a
+                            los más generales:">
+                                <caption>La siguiente tabla muestra los niveles de especificidad, desde los más específicos a
+                                    los más generales:</caption>
+                                <thead>
+                                  <tr>
+                                    <th scope="col">Estilo</th>
+                                    <th scope="col">Ejemplo</th>
+                                    <th scope="col">Nivel de peso</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">!Important</th>
+                                    <td>cualquier-selector { <span class="celeste">color</span>: <span class="rojo">#FF0000</span><span>!important</span>; }</td>
+                                    <td><b>1</b>, 0, 0, 0, 0</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">inline</th>
+                                    <td>&lt;<span class="rojo">p</span> <span>style</span>=<span>“color:#FF0000;”</span><b>&gt;</b>Lorem Ipsum&lt;<span class="rojo">/p</span>&gt;</td>
+                                    <td>0, <b>1</b>, 0, 0, 0</td>
+                                  </tr>
+                                  <!-- ... otras filas se han eliminado por abreviar -->
+                                  <tr>
+                                    <th scope="row">ID</th>
+                                    <td><span class="amarillo">#parrafo</span> { <span class="celeste">color</span>: <span class="rojo">#FF0000</span>; }</td>
+                                    <td>0, 0, <b>1</b>, 0, 0</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">Clases, atributos y pseudoclases</th>
+                                    <td><span class="amarillo">.parrafo</span> { <span class="celeste">color</span>: <span class="rojo">#FF0000</span>; }</td>
+                                    <td>0, 0, 0, <b>1</b>, 0</td>
+                                   </tr>
+                                   <tr>
+                                    <th scope="row">Etiquetas y pseudoelementos</th>
+                                    <td><span class="amarillo">p</span> { <span class="celeste">color</span>: <span class="rojo">#FF0000</span>; }</td>
+                                    <td>0, 0, 0, 0, <b>1</b></td>
+                                   </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                        <div>
+                            <h2>Orden de las reglas en CSS</h2>
+                            <figure>
+                                <img src="static/img/CSS/ordenCSS.png" alt="orden css">
+                            </figure>
+                            <p><b>IMPORTANTE:</b> Cuando varias declaraciones tienen igual especificidad, se aplicará al elemento la
+                                última declaración encontrada en el CSS.</p>
+                        </div>
+                        <div>
+                            <h2>Ejemplo explicado:</h2>
+                            <ol>
+                                <li>Resultado inicial: <span class="rojo"><b>  Lorem ipsum dolor sit amet, consectetur adipisicing elit.</b></span><br>
+                                    Si comentamos esta línea: <span class="backgroundNegro">color: <span class="rojo">red</span><span class="celeste">!important</span>;</span></li>
+                                <li>Se aplica el estilo en línea, que es el siguiente en el nivel de jerarquía: <br><span class="backgroundNegro">&lt;<span class="rojo">p</span> id="primer-parrafo" class="parrafo" <span class="rojo Bamarillo"><b>style="color:pink"</b></span>&gt;</span><span class="rosa"><b>  Lorem ipsum dolor,</b></span></li>
+                                <li>Si quitamos el estilo en línea, se aplica el estilo del ID (#primer-parrafo): <br><span class="backgroundNegro">&lt;<span class="rojo">p</span> <span class="rojo Bamarillo"><b>id="primer-parrafo"</b></span> class="parrafo"&gt;</span><span class="azul">Lorem ipsum dolor,sit amet</span></li>
+                                <li>Si le quitamos el estilo del ID, se aplica el estilo de clase, que es el siguiente en jerarquía: <br><span class="verde">  <b>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</b></span></li>
+                                <li>Y si, finalmente, quitamos el estilo de clase se aplicará el estilo de la etiqueta, que es el último en jerarquía <br><span class="amarillo"><b>  Lorem ipsum dolor sit, amet consectetur adipisicing elit.</b></span></li>
+                            </ol>
+                            <p>Más información: <br>
+                                <a href="https://developer.mozilla.org/es/docs/Web/CSS/Specificity">https://developer.mozilla.org/es/docs/Web/CSS/Specificity</a><br>
+                                <a href="https://www.w3schools.com/css/css_specificity.asp">https://www.w3schools.com/css/css_specificity.asp</a></p>
+                        </div>
+                </div>
+                <div>
+                    
+                </div>
+            </article>
+            <article data-content id="js" class="">
+                <h2> este es el section de JavaScript</h2>
+                <p>icta tempore perferendis? Odio illo temporibus autem veniam tenetur reiciendis assumenda hic
+                    molestiae, officiis laudantium eum debitis earum porro corporis consequuntur voluptate ex ab nisi
+                    illum!</p>
+            </article>
+            <article data-content id="bootstrap" class="">
+                <h2> este es el section de bootstrap</h2>
+                <p>axime molestias obcaecati beatae sequi ullam architecto minima, praesentium, asperiores dolore
+                    provident libero ut voluptatem, soluta doloribus ipsa animi consectetur placeat nobis. Excepturi
+                    voluptates eligendi architecto amet? Atque?</p>
+            </article>
         </section>
-        <aside class="aside-2"><p>aca esta un item mas</p></aside>
+        <aside id="asideDerecha" class="in-flex">
+            <p>aca esta un item mas</p>
+        </aside>
     </main>
     <footer>
-
+     <P>Este fue un proyecto entre Grecia Gamboa y Nicolas Blanco.</P>
     </footer>
     <script src="templates/script/script.js"></script>
-    </body>
+</body>
+
 </html>

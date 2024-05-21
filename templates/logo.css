@@ -1,0 +1,41 @@
+#logoContenedor {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+    height: 24vh;
+}
+
+#logoGradiente {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    display: inline-block;
+    background: radial-gradient(circle at center, rgb(43, 209, 231) 1%, transparent 59%);
+}
+
+#logo {
+    display: flex;
+    background: url(../static/img/Background-Parthenon.png) no-repeat center;
+    background-size: contain;
+    padding: 15px 30px;
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    top: 9px;
+    left: 10px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+#letras {
+    background: url(../static/img/Recio.jpeg) no-repeat center;
+    background-size: contain;
+    display: inline-block;
+    position: absolute;
+    flex-grow: 1;
+    width: 5vw;
+    height: 10vh;
+    opacity: .5;
+    border-radius: 100% 0;
+    flex-grow: 1;
+}

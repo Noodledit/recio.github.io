@@ -5,8 +5,11 @@ git remote add origin "LINK"
 
 git add nombre_del_archivo.extencion
 git commit -m "mensaje que se deja en el commit"
+git commit --amend para editar el ultimo commit
 git push -u origin master
 
 git pull origin master
 
 prueba
+
+git stash para cargar el ultimo commit

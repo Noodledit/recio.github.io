@@ -1,0 +1,98 @@
+HTML
+
+<div id="caja">
+        <span id="spn1"></span>
+        <span id="spn2"></span>
+        <span id="spn3"></span>
+        <span id="spn4"></span>
+                </div>
+
+CSS
+
+
+#caja span{
+    display: block;
+    position: absolute;
+}
+
+#caja {
+    height: 200px;
+    width: 200px;
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #00ffb3;
+    letter-spacing: 4px;
+    font-size: 24px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: .2s;
+}
+
+#spn1 {
+    border: solid red;
+    border-radius: 100%;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, blue, #a945c7);
+    transition: opacity 1s ease-in-out;
+    animation: derecha 3s infinite;
+}
+
+#caja:hover #spn1 {
+    left: 100%;
+    transition: 1s;
+}
+
+#spn2 {
+    top: -100%;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    filter: blur(2px);
+    background: linear-gradient(180deg, transparent, #a945c7);
+    transition: opacity 1s ease-in-out;
+    animation: deslizarAbajo 3s infinite;
+}
+
+#caja:hover #spn2 {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+#spn3 {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    filter: blur(2px);
+    height: 3px;
+    background: linear-gradient(270deg, transparent, #a945c7);
+    transition: opacity 1s ease-in-out;
+    animation: derecha 3s infinite;
+}
+
+#caja:hover #spn3 {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+#spn4 {
+    left: 0;
+    bottom: -100%;
+    width: 3px;
+    height: 100%;
+    filter: blur(2px);
+    background: linear-gradient(360deg, transparent, #a945c7);
+    transition: opacity 1s ease-in-out;
+    animation: derecha 3s infinite;
+}
+
+#caja:hover #spn4 {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}

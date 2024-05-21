@@ -1,0 +1,35 @@
+.backgroundNegro {
+    background-color: black;
+    color: white;
+    padding: 3px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.amarillo {
+    color: yellow;
+}
+
+.verde {
+    color: greenyellow;
+}
+
+.rojo {
+    color: rgba(255, 0, 0, 0.651);
+}
+
+.celeste {
+    color: aqua;
+}
+
+.Bamarillo {
+    background-color: yellow;
+}
+
+.rosa {
+    color: pink;
+}
+
+.azul {
+    color: blue;
+}

@@ -1,70 +1,8 @@
+@import url(hamburguesa.css);
+@import url(logo.css);
 @import url(common.css);
-
-.button-container {
-    display: flex;
-    flex-grow: 1;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: flex-end;
-    position: relative;
-}
-
-.butt-flex {
-    margin: .5vw 2vw;
-    display: flex;
-    flex-direction: column;
-    width: 3rem;
-    height: 3rem;
-    border: 0;
-    background: transparent;
-    gap: .40rem;
-    cursor: pointer;
-    justify-items: center;
-    align-items: center;
-}
-
-.butt-flex:active span {
-    background-color: rgb(0, 188, 221);
-}
-
-.butt-flex>span {
-    background: white;
-    height: 3px;
-    width: 100%;
-    border-radius: 5px;
-    transition: transform .5s, opacity .3s;
-    transform-origin: left;
-    margin: 2px;
-}
-
-.butt-flex:hover span:first-child {
-    transform: rotate(45deg);
-}
-
-.butt-flex:hover span:nth-child(2) {
-    opacity: 0;
-}
-
-.butt-flex:hover span:last-child {
-    transform: rotate(-45deg);
-}
-
-.grid-container {
-    display: grid;
-    grid-template-areas:
-        "head head head head"
-        "main main main main"
-        "foot foot foot foot"
-    ;
-    /* grid-template-columns: 2fr 1fr;
-    grid-template-rows: 100px 200px 100px; */
-}
-
-.grid-item header {}
-
-.grid-item main {}
-
-.grid-item footer {}
+@import url(decoracionTexto.css);
+@import url(funcionalidad.css);
 
 .navegacion {
     background-color: transparent;
@@ -77,8 +15,6 @@
     border-radius: .5rem;
     cursor: pointer;
     transition: box-shadow 1s ease, color .06s ease;
-    /* box-shadow: .5rem .5rem 1rem rgb(0, 0, 0),
-        -.5rem -.5rem 1rem #2b2b2b; */
     filter: blur(1.5px);
 }
 
@@ -93,90 +29,196 @@
         inset -.2rem -.2rem 1rem #2b2b2b;
 }
 
-#logo {
-    height: 100%;
-    flex-grow: 1;
-}
-
-.logo {
-    height: 20rem;
-    align-content: start;
-    /* justify-content: flex-end; */
-    /* height: 20rem;
-    width: auto; */
-    background: radial-gradient(circle, white 15%, transparent 69%);
-    background-repeat: no-repeat;
+#gato {
+    background: url(../static/img/gato.png) no-repeat center;
     background-size: contain;
-    background-position: center;
+    position: absolute;
+    top: -65px;
+    width: 20%;
+    height: 800px;
+    flex-grow: 2;
+    opacity: .7;
+    filter: blur(20px) drop-shadow(-20px 10px 5px black) brightness(.1);
+    transition: opacity 1s, filter 1.5s;
 }
 
-/* #logo::before {
-    content: "";
-    position: absolute;
-    top: -1rem;
-    right: 0;
-    bottom: 0;
-    left: -9rem;
-    background: radial-gradient(circle, white 0%, transparent 45%);
-} */
+#gato:hover {
+    opacity: 1;
+    filter: blur(0px) drop-shadow(-20px 10px 5px black);
+}
 
 #menu {
     padding: 0 .5rem .5rem .5rem;
-    background-color: #131313;
     border-radius: 0 0 .5rem .5rem;
+    height: 90px;
     position: relative;
     display: flex;
-    flex-grow: 1;
+    flex-grow: 3;
     flex-direction: row;
-    justify-content: center;
+    justify-content: end;
     align-items: end;
-    z-index: 1;
 }
 
-[data-content] {
-    display: none;
-    padding: 5rem;
-}
-
-.activo[data-content] {
+#menuLeft {
+    margin: 0;
+    padding: 0;
     display: block;
-    height: 100vh;
+    position: fixed;
 }
 
-@keyframes gradient { 
-    0%{background-position:0% 50%}
-    50%{background-position:50% 50%}
-    100%{background-position:0% 50%}
+.boton-flotante {
+    display: inline;
+    position: fixed;
+    left: 20px;
+    bottom: 90vh;
+    height: 45px;
+    background-color: #0074d9;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.navbar {
+    flex-grow: 1;
+    height: 100vh;
+    background-color: #131313;
+    background-image: url(../static/img/noodle.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* padding: 12px 16px; */
+    /* Hace que el menú sea sticky */
+    /* Se mantendrá en la parte superior */
+    transition: left 0.3s ease-in-out;/* Agrega una transición suave */
+}
+
+.navbar.mostrar-menu {
+    position: fixed;
+    /* Muestra el menú */
+    left: 0;
+    /* Muestra el menú deslizándolo hacia la izquierda */
+}
+
+.sectionGrid {
+  display: grid;
+  gap: .2rem 5rem;
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+.sectionGrid:first-child {
+  max-width: 250px;
+}
+
+@media screen (min-width: 600px) {
+  .salto {
+    display: inline;
+  }
+}
+
+.grande {
+  font-size: 7vh;
+}
+
+.home {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.in-flex {
+  flex: .5;
+  min-width: 100px;
+}
+
+.in-flex:first-of-type {
+  flex: 1;
+  padding: 25px;
+  /* background-color: #f38484e3; */
+  margin: 20px;
+}
+
+.in-flex article {
+  padding: 25px;
+  /* background-color: #3a398dc4; */
+  margin: 20px;
+}
+
+.in-flex article div{
+  flex-direction: row;
+  padding: 25px;
+  /* background-color: #fbff01c7; */
+  margin: 20px;
+}
+
+.in-flex2 {
+  flex: 2;
+  min-width: 250px;
+}
+
+.in-flex2:first-of-type {
+  flex: 5;
+  padding: 25px 0;
+  margin: 15px 0;
+}
+
+.in-flex2 article {
+  padding: 25px 0;
+  margin: 20px;
+}
+
+.in-flex2 article div{
+  border-radius: 15px;
+  background-color: rgba(43, 43, 43, .5);
+  margin:0 20px;
+  min-width: 150px;
+}
+
+.sectionGrid {
+  display: grid;
+  gap: .2rem auto;
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+.sectionGrid:first-child {
+  max-width: 250px;
+}
+
+@media screen (min-width: 600px) {
+
+  .in-flex2:first-of-type {
+    padding: 0;
+    margin: 0;
+  }
+  .in-flex2 article {
+    padding: 0;
+    margin: 0;
+  }
+  .in-flex2 article div{
+    padding: 0;
+    margin: 0;
   }
 
-[data-target] {
-    transition: filter 1.5s ease, box-shadow .4s ease;
-    background: transparent;
+  .salto {
+    display: inline;
+  }
+  aside {
+    display: none;
+  }
+  #menuleft {
+    display: none;
+    left: -100%;
+  }
+  .boton-flotante {
+    position: sticky;
+    display:inline-block;
+  }
 }
 
-.actual[data-target] {
-    color: aliceblue;
-    background-color: #ffffff;
-    opacity: .9;
-    position: relative;
-    content: "";
-    background-size: 1400% 1400%;
-    border-radius: 10px;
-    filter: blur(.4px);
+.grande {
+  font-size: 7vh;
 }
 
-.actual[data-target]::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(270deg, #008080, #00FFFF, #008cff, #008064, #00ffb3, #7FFF00);
-    background-size: 800%;
-    border-radius: 10px;
-    filter: blur(12px);
-    transition: opacity 0.7s ease-in-out;
-    animation: gradient 3s ease infinite;
+#estructura {
+  grid-template-columns:repeat(auto-fill, minmax(160px, 2fr));
 }
